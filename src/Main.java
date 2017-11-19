@@ -25,15 +25,16 @@ public class Main {
         for (int i = 0; i < n; i++) {
             disks += "##";
         }
-
+        System.out.println(disks);
         for (int d = 0; d < n; d++)
         {
+            disks = disks.substring(0, n - d);
             TOWER[1].push(disks);
-            disks = disks.substring(n - 2);
+
         }
 
         animate();
-        move(n, 1, 2, 3);
+        move(PLATES, 1, 2, 3);
     }
 
 
